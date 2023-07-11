@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.currency-container {
+    margin-bottom: 10px;
+    background-color: lightgreen;
+    border-radius: 5px; /* Set the border radius */
+  }
+  
+  .currency-label {
+    margin-right: 10px;
+  }
+  
+  .currency-select {
+    padding: 5px;
+    color: black;
+    background-color: lightgreen;
+    border-radius: 5px; /* Set the border radius */
+  }
