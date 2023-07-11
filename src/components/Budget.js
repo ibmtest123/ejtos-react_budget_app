@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Budget = () => {
-  const { budget,remaining, dispatch } = useContext(AppContext);
+  const { budget,currency, remaining, dispatch } = useContext(AppContext);
 
   const handleBudgetChange = (e) => {
     const newBudget = parseInt(e.target.value);
@@ -10,7 +10,7 @@ const Budget = () => {
       dispatch({ type: 'SET_BUDGET', payload: newBudget });
     }
     if (newBudget > 20000){
-        alert("You have exceeded 20,000!")
+        alert("The maximum budget is $20,000!")
     }
     if (remaining < 0){
         alert("You cannot reduce the budget lower than the spending")
@@ -19,7 +19,7 @@ const Budget = () => {
 
   return (
     <div className='alert alert-secondary'>
-      <span>Budget: £</span>
+      <span>Budget: {currency}</span>
       <input
         type='number'
         className='form-control'
