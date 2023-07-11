@@ -27,6 +27,7 @@ const AllocationForm = (props) => {
                     payload: expense,
                 });
             }
+    
     };
     return (
         <div>
@@ -55,7 +56,7 @@ const AllocationForm = (props) => {
                         required='required'
                         type='number'
                         id='cost'
-                        value={cost}
+                        value={cost} 
                         style={{ marginLeft: '2rem' , size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                         </input>
